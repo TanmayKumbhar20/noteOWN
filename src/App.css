@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+    padding: 0%;
+    margin: 0%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollable-div{
+  overflow: auto;
+}
+
+.bg-main{
+    background-color: black;
+}
+
+.blur-card{
+/* From https://css.glass */
+background: rgba(255, 255, 255, 0);
+/* border-radius: 16px; */
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
+backdrop-filter: blur(8.4px);
+-webkit-backdrop-filter: blur(8.4px);
+}
+.text-color-sideBar{
+    color:#767A9D;
+}
+
+.shadow {
+    filter: drop-shadow(10px 10px 200px #760ef1) drop-shadow(-10px -10px 50px #760ef1);
+  }
+  
+  .circle-wrapper {
+    background-color: #760ef1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40%;
+  }
+  
+  .circle {
+    background-color: hsl(210, 50%, 14%);
+    border-radius: 50%;
+    margin-top: 10px;
+    filter: blur(115px) drop-shadow(-10px -10px 75px #ff00ffb0);
+  }
+  
+  .circle p {
+    color: #FFF;
+  }
+
+
+  /* Back Pulse */
+@-webkit-keyframes hvr-back-pulse {
+  50% {
+    background-color: rgb(49,56,82);
+  }
+}
+@keyframes hvr-back-pulse {
+  50% {
+    background-color: rgb(49,56,82);
+  }
+}
+.hvr-back-pulse {
+  /* display: inline-block; */
+  /* vertical-align: middle; */
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  overflow: hidden;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  height: 50px;
+}
+.hvr-back-pulse:hover, .hvr-back-pulse:focus, .hvr-back-pulse:active {
+  -webkit-animation-name: hvr-back-pulse;
+  animation-name: hvr-back-pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-color: rgb(49,56,82);
+  background-color: rgb(49,56,82);
+  color: white;
+ 
+}
+
+.hvr-back-pulse:hover + .purpleIcon,
+.hvr-back-pulse:focus + .purpleIcon,
+.hvr-back-pulse:active + .purpleIcon {
+  color: purple !important; /* Add !important to ensure specificity */
+}
+
